@@ -25,10 +25,10 @@ public class Deck {
 	 }
 
 
-public void shuffle() {
+public void shuffle() { // it will shuffle the card
 	Collections.shuffle(cards);
 	}
-public Card draw() {
+public Card draw() { // it removes the card and return to the top
 	Card card=cards.remove(0);
 	return card;
 }

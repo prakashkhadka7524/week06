@@ -8,23 +8,24 @@ public class Player {
 	private int score;
 	private String name;
 	
-	public Player(String name, List<Card> hand, int score) {
+	public Player(String name, List<Card> hand, int score) { // constructor with all elements
 		this.hand=hand;
 		this.name=name;
-		this.score=0;
+		this.score=score;
 			}
-	public Player() {
+	public Player() { // default constructor
 			}
 	
-	public void draw(Deck deck) { 
+	public void draw(Deck deck) {  // call from the deck class
 		hand.add(deck.draw());
 	}
-	public Card flip() {
+	public Card flip() { // removes and return to the  top
 		return hand.remove(0);
 	}
-	public void incrementscore() {
+	public void incrementscore() { // whoever win it will increase the score
 		 score++;
 	}
+	// Getters and Setters method
 	
 	public List<Card> getHand() {
 		return hand;
